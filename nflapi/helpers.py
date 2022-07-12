@@ -10,8 +10,16 @@ from .shield import shield, GameOrderBy, OrderByDirection
 
 DEFAULT_FIELDS = {
     shield.Game: ['id', 'game_time', 'slug', 'game_detail_id'],
-    shield.GameDetail: ['id', 'game_time', 'phase', 'period', 'game_clock'],
-    shield.Team: ['id', 'abbreviation', 'full_name', 'nick_name'],
+    shield.GameDetail: ['id', 'game_time', 'phase', 'period', 'game_clock', 
+                        'home_points_total', 'visitor_points_total', 'home_team', 'visitor_team',
+                        'home_points_overtime_total', 'home_points_q1', 'home_points_q2', 
+                        'home_points_q3', 'home_points_q4',
+                        'visitor_points_overtime_total', 'visitor_points_q1', 'visitor_points_q2', 
+                        'visitor_points_q3', 'visitor_points_q4','scoring_summaries', 
+                        'live_home_team_game_stats', 'live_visitor_team_game_stats'
+                        ],
+    shield.Team: ['id', 'abbreviation', 'full_name', 'nick_name', 'conference', 'division', 
+                    'city_state_region', 'season_value', 'venues'],
     shield.TeamRecord: ['overall_win', 'overall_loss', 'overall_tie', 'overall_pct', 'team_id', 'division_rank',
                         'conference_rank'],
     shield.CurrentClubRoster: ['display_name', 'first_name', 'jersey_number', 'last_name', 'nfl_experience',
